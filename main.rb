@@ -80,7 +80,7 @@ Good luck!"
         anounce_win
         break
       end
-      puts "\n\n"
+      puts "\n\nUSE THE WHITE AND BLACK KEYS ABOVE TO MAKE YOUR NEXT GUESS\n"
     end
   end
 
