@@ -67,12 +67,20 @@ Good luck!"
     end
   end
 
+  def anounce_win
+    puts 'Congrats! You broke the code.'
+  end
+
   def game_run
     i = 12
     while i.positive?
       board.make_code
       board.take_guess
       p board.create_keys
+      if board.win
+        anounce_win
+        break
+      end
       puts "\n\n"
     end
   end
