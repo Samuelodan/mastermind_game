@@ -82,6 +82,7 @@ Good luck!"
         break
       end
       puts "\n\nUSE THE WHITE AND BLACK KEYS ABOVE TO MAKE YOUR NEXT GUESS\n"
+      i -= 1
     end
   end
 
