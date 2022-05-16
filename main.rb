@@ -50,4 +50,17 @@ class Game
   def initialize
     @board = Board.new
   end
+
+  def game_run
+    i = 12
+    while i.positive?
+      board.make_code
+      board.take_guess
+      board.create_keys
+    end
+  end
+
+  def begin
+    greet
+  end
 end
