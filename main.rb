@@ -20,4 +20,11 @@ class Board
     @code = random_code
     random_code
   end
+
+  def take_guess
+    puts "Available colors: #{@all_colors}"
+    puts "Type any four colors seperated by a comma\nhit Enter when done"
+    guess = gets.chomp.downcase.split(',')
+    @current_guess = guess
+  end
 end
