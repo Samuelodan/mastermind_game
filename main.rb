@@ -93,3 +93,6 @@ Good luck!"
     greet
   end
 end
+
+game = Game.new
+game.begin
