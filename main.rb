@@ -51,6 +51,19 @@ class Game
     @board = Board.new
   end
 
+  def greet
+    puts "\t\nHello there! Welcome to the Mastermind game\n
+I believe you know the rules already\n
+You have 12 chances to guess what the hidden color sequence is\n
+Good luck!"
+    puts "\n\nenter 'y' to continue"
+    con = gets.chomp.downcase
+    case con
+    when 'y' then game_run
+    else puts 'You can come back to the game later by clicking run'
+    end
+  end
+
   def game_run
     i = 12
     while i.positive?
