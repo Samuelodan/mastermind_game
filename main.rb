@@ -9,6 +9,7 @@ class Board
     @all_colors = %w[red yellow green blue brown purple]
     @current_guess = nil
     @code = nil
+    @win = false
   end
 
   def make_code
@@ -38,6 +39,8 @@ class Board
 
     black_keys = exact_match.length
     white_keys = initial_match.length - black_keys
+
+    @win = true if black_keys == 4
 
     { white_keys: white_keys, black_keys: black_keys }
   end
@@ -69,7 +72,8 @@ Good luck!"
     while i.positive?
       board.make_code
       board.take_guess
-      board.create_keys
+      p board.create_keys
+      puts "\n\n"
     end
   end
 
@@ -77,3 +81,6 @@ Good luck!"
     greet
   end
 end
+
+g = Game.new
+g.begin
