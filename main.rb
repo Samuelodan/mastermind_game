@@ -25,6 +25,6 @@ class Board
     puts "Available colors: #{@all_colors}"
     puts "Type any four colors seperated by a comma\nhit Enter when done"
     guess = gets.chomp.downcase.split(',')
-    @current_guess = guess
+    @current_guess = guess.map(&:strip)
   end
 end
