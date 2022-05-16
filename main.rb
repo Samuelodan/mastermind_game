@@ -75,6 +75,7 @@ Good luck!"
   def game_run
     i = 12
     while i.positive?
+      puts "#{i} attempts left"
       board.take_guess
       p board.create_keys
       if board.win
@@ -84,6 +85,7 @@ Good luck!"
       puts "\n\nUSE THE WHITE AND BLACK KEYS ABOVE TO MAKE YOUR NEXT GUESS\n"
       i -= 1
     end
+    puts 'Gameover! You can play again by clicking "run"'
   end
 
   def begin
