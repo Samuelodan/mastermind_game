@@ -42,3 +42,12 @@ class Board
     { white_keys: white_keys, black_keys: black_keys }
   end
 end
+
+# this controls the flow of the game
+class Game
+  attr_reader :board
+
+  def initialize
+    @board = Board.new
+  end
+end
