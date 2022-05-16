@@ -68,6 +68,7 @@ Good luck!"
   end
 
   def anounce_win
+    puts "Hidden code: #{board.code}"
     puts 'Congrats! You broke the code.'
   end
 
