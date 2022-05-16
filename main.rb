@@ -74,7 +74,6 @@ Good luck!"
   def game_run
     i = 12
     while i.positive?
-      board.make_code
       board.take_guess
       p board.create_keys
       if board.win
@@ -86,9 +85,7 @@ Good luck!"
   end
 
   def begin
+    board.make_code
     greet
   end
 end
-
-g = Game.new
-g.begin
