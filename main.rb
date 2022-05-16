@@ -2,7 +2,7 @@
 
 # creates new boards
 class Board
-  attr_reader :all_colors, :code
+  attr_reader :all_colors, :code, :win
   attr_accessor :current_guess
 
   def initialize
