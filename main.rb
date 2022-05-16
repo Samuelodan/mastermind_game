@@ -42,10 +42,3 @@ class Board
     { white_keys: white_keys, black_keys: black_keys }
   end
 end
-
-# creates player for the game
-class Player
-  def initialize
-    @board = Board.new
-  end
-end
