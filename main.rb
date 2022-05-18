@@ -46,8 +46,10 @@ class Board
   end
 end
 
+# creates computer class that breaks codes
 class Computer
   def initialize
+    @initial_guess = [1, 1, 2, 2]
   end
 end
 
