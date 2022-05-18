@@ -46,6 +46,11 @@ class Board
   end
 end
 
+class Computer
+  def initialize
+  end
+end
+
 # this controls the flow of the game
 class Game
   attr_reader :board
