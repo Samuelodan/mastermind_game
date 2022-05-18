@@ -50,6 +50,7 @@ end
 class Computer
   def initialize
     @initial_guess = [1, 1, 2, 2]
+    @set = [1, 2, 3, 4, 5, 6].repeated_permutation(4).to_a
   end
 end
 
