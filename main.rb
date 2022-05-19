@@ -51,6 +51,14 @@ class Computer
   def initialize
     @initial_guess = [1, 1, 2, 2]
     @set = [1, 2, 3, 4, 5, 6].repeated_permutation(4).to_a
+    @ref = %w[red blue green yellow orange purple]
+  end
+
+  def take_input
+    puts "Choose your secret color code from this list: \n#{@ref}"
+    puts "Type four colors separated by a comma\nhit Enter when done"
+    code = gets.chomp.downcase.split(',')
+    code = code.map(&:strip)
   end
 end
 
@@ -102,5 +110,5 @@ Good luck!"
   end
 end
 
-game = Game.new
-game.begin
+# game = Game.new
+# game.begin
