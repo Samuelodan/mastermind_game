@@ -136,8 +136,8 @@ Good luck!"
     end
   end
 
-  def anounce_result(role)
-    case role
+  def anounce_result(status)
+    case status
     when 'breaker' then puts "Hidden code: #{board.code}\nCongrats! You broke the code"
     when 'maker'
       puts "You win!!\nThe Computer could'nt guess your code\nYou are the ultimate Code Maker"
