@@ -48,13 +48,14 @@ end
 
 # creates computer class that breaks codes
 class Computer
-  attr_reader :code
+  attr_reader :code, :win
 
   def initialize
     @initial_guess = [1, 1, 2, 2]
     @set = [1, 2, 3, 4, 5, 6].repeated_permutation(4).to_a
     @ref = %w[red blue green yellow orange purple]
     @code = []
+    @win = false
   end
 
   def take_input
@@ -147,6 +148,14 @@ Don't worry though, you can always play again by clicking 'run'"
 Don't worry though, you can always play again by clicking 'run'"
     end
   end
+
+  def computer_run
+    12.downto do |i|
+      puts "#{i} attempts left"
+      computer.
+    end
+  end
+
 
   def game_run
     12.downto(1) do |i|
