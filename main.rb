@@ -107,10 +107,11 @@ end
 
 # this controls the flow of the game
 class Game
-  attr_reader :board
+  attr_reader :board, :computer
 
   def initialize
     @board = Board.new
+    @computer = Computer.new
   end
 
   def greet_breaker
