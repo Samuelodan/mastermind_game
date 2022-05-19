@@ -69,6 +69,14 @@ class Computer
     end
     code
   end
+
+  def display_guess
+    color = []
+    4.times do |i|
+      color << @ref[@initial_guess[i] - 1]
+    end
+    puts "Computer's guess: #{color}"
+  end
 end
 
 # this controls the flow of the game
