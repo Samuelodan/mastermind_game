@@ -65,8 +65,7 @@ class Computer
   end
 
   def secret_code
-    input = take_input
-    input.each do |item|
+    take_input.each do |item|
       @code << @ref.index(item) + 1
     end
   end
