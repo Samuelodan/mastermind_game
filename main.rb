@@ -70,6 +70,22 @@ class Computer
     code
   end
 
+  def get_hint(code, guess)
+    initial_match = guess.select do |item|
+      code.include?(item)
+    end
+    exact_match = guess.select do |item|
+      guess.index(item) == code.index(item)
+    end
+
+    black_keys = exact_match.length
+    white_keys = initial_match.length - black_keys
+
+    @win = true if black_keys == 4
+
+    { white_keys: white_keys, black_keys: black_keys }
+  end
+
   def display_guess
     color = []
     4.times do |i|
