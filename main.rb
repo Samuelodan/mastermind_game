@@ -48,10 +48,13 @@ end
 
 # creates computer class that breaks codes
 class Computer
+  attr_reader :code
+
   def initialize
     @initial_guess = [1, 1, 2, 2]
     @set = [1, 2, 3, 4, 5, 6].repeated_permutation(4).to_a
     @ref = %w[red blue green yellow orange purple]
+    @code = []
   end
 
   def take_input
@@ -63,11 +66,9 @@ class Computer
 
   def secret_code
     input = take_input
-    code = []
     input.each do |item|
-      code << @ref.index(item) + 1
+      @code << @ref.index(item) + 1
     end
-    code
   end
 
   def get_hint(code, guess)
