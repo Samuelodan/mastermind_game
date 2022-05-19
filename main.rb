@@ -60,8 +60,8 @@ class Computer
   def take_input
     puts "Choose your secret color code from this list: \n#{@ref}"
     puts "Type four colors separated by a comma\nhit Enter when done"
-    code = gets.chomp.downcase.split(',')
-    code = code.map(&:strip)
+    code = gets.chomp.downcase.split(',') # i might combine...
+    code = code.map(&:strip) # ...these two lines later for this class and the Board class.
   end
 
   def secret_code
@@ -92,6 +92,16 @@ class Computer
       color << @ref[@initial_guess[i] - 1]
     end
     puts "Computer's guess: #{color}"
+  end
+
+  def make_guess
+    @initial_guess ||= @set[0]
+    initial_hint = get_hint(@code, @initial_guess)
+    set.delete_if do |combo|
+      current_hint = get_hint(@initial_guess, combo)
+      current_hint != initial_hint
+    end
+    @initial_guess = nil
   end
 end
 
