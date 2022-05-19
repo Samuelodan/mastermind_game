@@ -152,7 +152,7 @@ Don't worry though, you can always play again by clicking 'run'"
 
   def computer_run
     computer.secret_code
-    12.downto do |i|
+    12.downto(1) do |i|
       puts "#{i} attempts left"
       computer.make_guess
       if board.win
