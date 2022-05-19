@@ -95,11 +95,11 @@ class Computer
   end
 
   def make_guess
-    @initial_guess ||= @set[0]
+    @initial_guess ||= @set.sample
     initial_hint = get_hint(@code, @initial_guess)
     @set.delete_if do |combo|
-      current_hint = get_hint(@initial_guess, combo)
-      current_hint != initial_hint
+      current_hint = get_hint(combo, @initial_guess)
+      initial_hint != current_hint
     end
     display_guess
     @initial_guess = nil
