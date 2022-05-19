@@ -60,6 +60,15 @@ class Computer
     code = gets.chomp.downcase.split(',')
     code = code.map(&:strip)
   end
+
+  def secret_code
+    input = take_input
+    code = []
+    input.each do |item|
+      code << @ref.index(item) + 1
+    end
+    code
+  end
 end
 
 # this controls the flow of the game
