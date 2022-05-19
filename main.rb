@@ -119,6 +119,7 @@ class Game
 I believe you know the rules already\n
 You have 12 chances to guess what the hidden color sequence is\n
 Good luck!"
+    board.make_code
     game_run
   end
 
@@ -151,7 +152,7 @@ Don't worry though, you can always play again by clicking 'run'"
   def computer_run
     12.downto do |i|
       puts "#{i} attempts left"
-      computer.
+      computer
     end
   end
 
@@ -170,7 +171,6 @@ Don't worry though, you can always play again by clicking 'run'"
   end
 
   def begin
-    board.make_code
     greet
   end
 end
