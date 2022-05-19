@@ -135,9 +135,17 @@ Good luck!"
     end
   end
 
-  def anounce_win
-    puts "Hidden code: #{board.code}"
-    puts 'Congrats! You broke the code.'
+  def anounce_result(role)
+    case role
+    when 'breaker' then puts "Hidden code: #{board.code}\nCongrats! You broke the code"
+    when 'maker'
+      puts "You win!!\nThe Computer could'nt guess your code\nYou are the ultimate Code Maker"
+    when 'computer'
+      puts "You lost!\nThe Computer cracked your code.
+Don't worry though, you can always play again by clicking 'run'"
+    when 'gameover' then puts "You ran out of moves!!
+Don't worry though, you can always play again by clicking 'run'"
+    end
   end
 
   def game_run
@@ -147,13 +155,13 @@ Good luck!"
       board.take_guess
       p board.create_keys
       if board.win
-        anounce_win
+        anounce_result('breaker')
         break
       end
       puts "\n\nUSE THE WHITE AND BLACK KEYS ABOVE TO MAKE YOUR NEXT GUESS\n"
       i -= 1
     end
-    puts 'Gameover! You can play again by clicking "run"'
+    anounce_result('gameover')
   end
 
   def begin
@@ -162,5 +170,7 @@ Good luck!"
   end
 end
 
+g = Game.new
+g.anounce_result('gameover')
 # game = Game.new
 # game.begin
