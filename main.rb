@@ -60,8 +60,8 @@ class Computer
   def take_input
     puts "Choose your secret color code from this list: \n#{@ref}"
     puts "Type four colors separated by a comma\nhit Enter when done"
-    code = gets.chomp.downcase.split(',') # i might combine...
-    code = code.map(&:strip) # ...these two lines later for this class and the Board class.
+    code = gets.chomp.downcase.split(',') # i might combine these two lines later for this class...
+    code = code.map(&:strip) # ...and the Board class. Also get read of the code variable
   end
 
   def secret_code
