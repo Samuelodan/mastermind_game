@@ -113,15 +113,23 @@ class Game
     @board = Board.new
   end
 
-  def greet
-    puts "\t\nHello there! Welcome to the Mastermind game\n
+  def greet_breaker
+    puts "\t\nAlright, you're the code breaker for this round\n
 I believe you know the rules already\n
 You have 12 chances to guess what the hidden color sequence is\n
 Good luck!"
-    puts "\n\nenter 'y' to continue"
-    con = gets.chomp.downcase
-    case con
-    when 'y' then game_run
+    game_run
+  end
+
+  def greet
+    puts "\t\nHello there! Welcome to the Mastermind game\n
+I believe you know the rules already\n
+You can choose to be the code breaker or be the code maker\n
+Good luck!"
+    puts "\n\nenter 'b' to continue as code breaker\nor 'm' to be code maker"
+    case gets.chomp.downcase
+    when 'b' then greet_breaker
+    when 'm' then computer_run
     else puts 'You can come back to the game later by clicking run'
     end
   end
