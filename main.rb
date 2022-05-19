@@ -149,8 +149,7 @@ Don't worry though, you can always play again by clicking 'run'"
   end
 
   def game_run
-    i = 12
-    while i.positive?
+    12.downto(1) do |i|
       puts "#{i} attempts left"
       board.take_guess
       p board.create_keys
@@ -159,7 +158,6 @@ Don't worry though, you can always play again by clicking 'run'"
         break
       end
       puts "\n\nUSE THE WHITE AND BLACK KEYS ABOVE TO MAKE YOUR NEXT GUESS\n"
-      i -= 1
     end
     anounce_result('gameover')
   end
