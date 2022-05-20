@@ -118,7 +118,6 @@ class Game
 
   def greet_breaker
     puts "\t\nAlright, you're the code breaker for this round\n
-I believe you know the rules already\n
 You have 12 chances to guess what the hidden color sequence is\n
 Good luck!"
     board.make_code
