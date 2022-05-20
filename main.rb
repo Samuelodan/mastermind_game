@@ -181,5 +181,5 @@ Don't worry though, you can always play again by clicking 'run'"
     greet
   end
 end
-# game = Game.new
-# game.begin
+game = Game.new
+game.begin
