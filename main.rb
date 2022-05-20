@@ -74,8 +74,9 @@ class Computer
     initial_match = guess.select do |item|
       code.include?(item)
     end
-    exact_match = guess.select do |item|
-      guess.index(item) == code.index(item)
+    exact_match = []
+    for i in 0...4
+      exact_match << i if guess.slice(i, 1) == code.slice(i, 1)
     end
 
     black_keys = exact_match.length
