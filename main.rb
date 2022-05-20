@@ -169,7 +169,7 @@ Don't worry though, you can always play again by clicking 'run'"
       p board.create_keys
       if board.win
         anounce_result('breaker')
-        break
+        return
       end
       puts "\n\nUSE THE WHITE AND BLACK KEYS ABOVE TO MAKE YOUR NEXT GUESS\n"
     end
