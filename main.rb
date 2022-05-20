@@ -81,8 +81,6 @@ class Computer
     black_keys = exact_match.length
     white_keys = initial_match.length - black_keys
 
-    @win = true if black_keys == 4
-
     { white_keys: white_keys, black_keys: black_keys }
   end
 
@@ -97,6 +95,7 @@ class Computer
   def make_guess
     @initial_guess ||= @set.sample
     initial_hint = get_hint(@code, @initial_guess)
+    @win = true if initial_hint[:black_keys] == 4
     @set.delete_if do |combo|
       current_hint = get_hint(combo, @initial_guess)
       initial_hint != current_hint
