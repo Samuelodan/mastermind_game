@@ -154,9 +154,9 @@ Don't worry though, you can always play again by clicking 'run'"
     12.downto(1) do |i|
       puts "#{i} attempts left"
       computer.make_guess
-      if board.win
+      if computer.win
         anounce_result('computer')
-        break
+        return
       end
     end
     anounce_result('maker')
