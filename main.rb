@@ -30,8 +30,8 @@ class Board
   end
 
   def create_keys
-    initial_match = @current_guess.select do |item|
-      @code.include?(item)
+    initial_match = @code.select do |item|
+      @current_guess.include?(item)
     end
     exact_match = []
     for i in 0...4
@@ -72,8 +72,8 @@ class Computer
   end
 
   def get_hint(code, guess)
-    initial_match = guess.select do |item|
-      code.include?(item)
+    initial_match = code.select do |item|
+      guess.include?(item)
     end
     exact_match = []
     for i in 0...4
