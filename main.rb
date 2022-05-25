@@ -6,7 +6,7 @@ class Board
   attr_accessor :current_guess
 
   def initialize
-    @all_colors = %w[red yellow green blue brown purple]
+    @all_colors = %w[red blue green yellow orange purple]
     @current_guess = nil
     @code = nil
     @win = false
