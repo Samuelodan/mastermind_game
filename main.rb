@@ -35,7 +35,7 @@ class Board
     end
     exact_match = []
     for i in 0...4
-      exact_match << i if @current_guess.slice(i, 1) == @code.slice(i, 1)
+      exact_match << i if @current_guess[i] == @code[i]
     end
 
     black_keys = exact_match.length
@@ -77,7 +77,7 @@ class Computer
     end
     exact_match = []
     for i in 0...4
-      exact_match << i if guess.slice(i, 1) == code.slice(i, 1)
+      exact_match << i if guess[i] == code[i]
     end
 
     black_keys = exact_match.length
