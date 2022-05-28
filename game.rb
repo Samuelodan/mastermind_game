@@ -55,6 +55,7 @@ Don't worry though, you can always play again by clicking 'run'"
         anounce_result('computer')
         return
       end
+      sleep 2
     end
     anounce_result('maker')
   end
