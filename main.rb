@@ -4,5 +4,4 @@ require './computer'
 require './board'
 require './game'
 
-game = Game.new
-game.begin
+Game.new.begin
